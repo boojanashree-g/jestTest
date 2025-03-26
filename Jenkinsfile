@@ -15,7 +15,7 @@ pipeline {
                     sh 'npm cache clean --force'
 
                     if (fileExists("package.json")) {
-                        echo "Installingg dependencies in root"
+                        echo "Installing dependencies in root"
                         sh '''
                         rm -rf node_modules package-lock.json
                         npm install --verbose > npm-install.log 2>&1 || cat npm-install.log
